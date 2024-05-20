@@ -1,0 +1,37 @@
+{
+  "name": "@inframanufaktur/rss-manufaktur",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "ELEVENTY_ENV=development eleventy --serve --quiet",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inframanufaktur/rss-manufaktur.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/inframanufaktur/rss-manufaktur/issues"
+  },
+  "homepage": "https://github.com/inframanufaktur/rss-manufaktur#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-img": "^3.1.0",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@inframanufaktur/blog-parser": "^0.8.0",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "html-escaper": "^3.0.3"
+  },
+  "11ty": {
+    "compatbility": ">=2.0.0"
+  },
+  "dependencies": {
+    "@netlify/functions": "^1.2.0"
+  }
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ feed.meta.title }}</title>
+  {% if feed.meta.description %}
+    <subtitle>{{ feed.meta.description }}</subtitle>
+  {% endif %}
+  <link href="{{ permalink | absoluteUrl(site.baseURL) }}" rel="self" />
+  <link href="{{ feed.parserInfo.url }}" rel="alternate" />
+  <icon>{{ feed.meta.icon.parsedIcon | absoluteUrl(site.baseURL) }}</icon>
+  <updated>{{
+    feed.posts | getNewestCollectionItemDate | dateToRfc3339
+  }}</updated>
+  <id>{{ feed.parserInfo.url }}</id>
+  {#
+  <author>
+    <name>{{ site.author.name }}</name>
+    <email>{{ site.author.email }}</email>
+    <uri>{{ site.baseURL }}</uri>
+  </author>
+  #}
+  {{ content | safe }}
+</feed>
